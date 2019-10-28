@@ -6,7 +6,6 @@
 //  Copyright © 2019 tawfik. All rights reserved.
 //
 
-
 import UIKit
 
 extension UITableView {
@@ -23,4 +22,3 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as! T
     }
 }
-

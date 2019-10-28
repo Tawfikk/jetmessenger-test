@@ -1,10 +1,17 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
 target 'jetmessenger' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  
+  # Network
+  pod 'Moya'
+  pod 'Kingfisher'
+  pod 'Moya/RxSwift'
 
-  # Pods for jetmessenger
+  # Core
+  pod 'RxCocoa'
+  pod 'RxSwift'
+  
+  # Data base
+  pod 'RxRealm'
+  pod 'RealmSwift'
 
 end
