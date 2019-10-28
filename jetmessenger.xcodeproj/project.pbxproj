@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE023674F9A002EB595 /* AppDelegate.swift */; };
-		5DA55FE323674F9A002EB595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE223674F9A002EB595 /* SceneDelegate.swift */; };
-		5DA55FE523674F9A002EB595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE423674F9A002EB595 /* ViewController.swift */; };
-		5DA55FE823674F9A002EB595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FE623674F9A002EB595 /* Main.storyboard */; };
 		5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FE923674F9B002EB595 /* Assets.xcassets */; };
 		5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +15,6 @@
 /* Begin PBXFileReference section */
 		5DA55FDD23674F9A002EB595 /* jetmessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jetmessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA55FE023674F9A002EB595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DA55FE223674F9A002EB595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DA55FE423674F9A002EB595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5DA55FE723674F9A002EB595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DA55FE923674F9B002EB595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA55FEC23674F9B002EB595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DA55FEE23674F9B002EB595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,14 +51,115 @@
 			isa = PBXGroup;
 			children = (
 				5DA55FE023674F9A002EB595 /* AppDelegate.swift */,
-				5DA55FE223674F9A002EB595 /* SceneDelegate.swift */,
-				5DA55FE423674F9A002EB595 /* ViewController.swift */,
-				5DA55FE623674F9A002EB595 /* Main.storyboard */,
-				5DA55FE923674F9B002EB595 /* Assets.xcassets */,
-				5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */,
-				5DA55FEE23674F9B002EB595 /* Info.plist */,
+				5DA55FF82367512A002EB595 /* 📦 Model */,
+				5DA55FF42367511B002EB595 /* Core */,
+				5DA55FFE23675184002EB595 /* 📡 Network  */,
+				5DA55FF52367511F002EB595 /* Extensions */,
+				5DA55FF923675135002EB595 /* Business Logic */,
+				5DA55FFA2367513C002EB595 /* 📱 Screens */,
+				5DA55FFB23675145002EB595 /* View */,
+				5DA55FFC23675147002EB595 /* Resources */,
+				5DA55FFD23675161002EB595 /* Supporting Files */,
 			);
 			path = jetmessenger;
+			sourceTree = "<group>";
+		};
+		5DA55FF42367511B002EB595 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5DA55FF52367511F002EB595 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DA55FF623675122002EB595 /* UIKit */,
+				5DA55FF723675125002EB595 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DA55FF623675122002EB595 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5DA55FF723675125002EB595 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5DA55FF82367512A002EB595 /* 📦 Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "📦 Model";
+			sourceTree = "<group>";
+		};
+		5DA55FF923675135002EB595 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		5DA55FFA2367513C002EB595 /* 📱 Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5DA55FFF236751A7002EB595 /* UsersList */,
+				5DA56000236751AE002EB595 /* UserInfo */,
+			);
+			path = "📱 Screens";
+			sourceTree = "<group>";
+		};
+		5DA55FFB23675145002EB595 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DA55FFC23675147002EB595 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DA55FFD23675161002EB595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DA55FEE23674F9B002EB595 /* Info.plist */,
+				5DA55FE923674F9B002EB595 /* Assets.xcassets */,
+				5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DA55FFE23675184002EB595 /* 📡 Network  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "📡 Network ";
+			sourceTree = "<group>";
+		};
+		5DA55FFF236751A7002EB595 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		5DA56000236751AE002EB595 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +222,6 @@
 			files = (
 				5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */,
 				5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */,
-				5DA55FE823674F9A002EB595 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA55FE523674F9A002EB595 /* ViewController.swift in Sources */,
 				5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */,
-				5DA55FE323674F9A002EB595 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5DA55FE623674F9A002EB595 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DA55FE723674F9A002EB595 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.webvailo.jetmessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.webvailo.jetmessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
