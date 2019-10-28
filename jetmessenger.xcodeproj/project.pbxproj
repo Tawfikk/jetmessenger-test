@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */; };
 		5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56001236752B7002EB595 /* UIStoryboard.swift */; };
 		5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56003236752C8002EB595 /* UITableView+extension.swift */; };
+		5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56005236753CE002EB595 /* NetworkEndpoint.swift */; };
+		5DA5600823675537002EB595 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600723675537002EB595 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5DA55FEE23674F9B002EB595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA56001236752B7002EB595 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		5DA56003236752C8002EB595 /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		5DA56005236753CE002EB595 /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
+		5DA5600723675537002EB595 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jetmessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B7493B6D715EE6B7F315A /* Pods-jetmessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jetmessenger.debug.xcconfig"; path = "Target Support Files/Pods-jetmessenger/Pods-jetmessenger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 		5DA55FF42367511B002EB595 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5DA5600723675537002EB595 /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 		5DA55FFE23675184002EB595 /* 📡 Network  */ = {
 			isa = PBXGroup;
 			children = (
+				5DA56005236753CE002EB595 /* NetworkEndpoint.swift */,
 			);
 			path = "📡 Network ";
 			sourceTree = "<group>";
@@ -181,7 +187,6 @@
 				8B6B7493B6D715EE6B7F315A /* Pods-jetmessenger.debug.xcconfig */,
 				256BAB635BB655A674927B7B /* Pods-jetmessenger.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -307,9 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA5600823675537002EB595 /* Constants.swift in Sources */,
 				5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */,
 				5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */,
 				5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */,
+				5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HE43VYD2Y;
-				INFOPLIST_FILE = jetmessenger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jetmessenger/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HE43VYD2Y;
-				INFOPLIST_FILE = jetmessenger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jetmessenger/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
