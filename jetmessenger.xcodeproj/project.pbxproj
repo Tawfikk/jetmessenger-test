@@ -15,6 +15,8 @@
 		5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56003236752C8002EB595 /* UITableView+extension.swift */; };
 		5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56005236753CE002EB595 /* NetworkEndpoint.swift */; };
 		5DA5600823675537002EB595 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600723675537002EB595 /* Constants.swift */; };
+		5DA5600B236756A8002EB595 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600A236756A8002EB595 /* Network.swift */; };
+		5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600C2367577F002EB595 /* MembersModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5DA56003236752C8002EB595 /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		5DA56005236753CE002EB595 /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
 		5DA5600723675537002EB595 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5DA5600A236756A8002EB595 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5DA5600C2367577F002EB595 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
 		854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jetmessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B7493B6D715EE6B7F315A /* Pods-jetmessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jetmessenger.debug.xcconfig"; path = "Target Support Files/Pods-jetmessenger/Pods-jetmessenger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5DA5600723675537002EB595 /* Constants.swift */,
+				5DA560092367569D002EB595 /* Network Layer */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		5DA55FF82367512A002EB595 /* 📦 Model */ = {
 			isa = PBXGroup;
 			children = (
+				5DA5600C2367577F002EB595 /* MembersModel.swift */,
 			);
 			path = "📦 Model";
 			sourceTree = "<group>";
@@ -179,6 +185,14 @@
 			children = (
 			);
 			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		5DA560092367569D002EB595 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5600A236756A8002EB595 /* Network.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		889160654617931D35352FA0 /* Pods */ = {
@@ -314,8 +328,10 @@
 			files = (
 				5DA5600823675537002EB595 /* Constants.swift in Sources */,
 				5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */,
+				5DA5600B236756A8002EB595 /* Network.swift in Sources */,
 				5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */,
 				5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */,
+				5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */,
 				5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
