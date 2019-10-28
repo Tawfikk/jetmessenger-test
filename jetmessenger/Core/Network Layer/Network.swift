@@ -14,7 +14,7 @@ protocol Network: class {
 }
 
 final class NetworkImplementation: Network {
-    
+
     private let provider = MoyaProvider<NetworkEndpoint>()
     
     // MARK: - Constructor 🏗

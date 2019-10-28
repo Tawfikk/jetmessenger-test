@@ -17,6 +17,13 @@
 		5DA5600823675537002EB595 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600723675537002EB595 /* Constants.swift */; };
 		5DA5600B236756A8002EB595 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600A236756A8002EB595 /* Network.swift */; };
 		5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600C2367577F002EB595 /* MembersModel.swift */; };
+		5DA56010236758E2002EB595 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5600F236758E2002EB595 /* CacheService.swift */; };
+		5DA5601223675A4C002EB595 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601123675A4C002EB595 /* UsersListViewController.swift */; };
+		5DA5601423675A5B002EB595 /* UsersListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA5601323675A5B002EB595 /* UsersListViewController.storyboard */; };
+		5DA5601623675ABF002EB595 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601523675ABF002EB595 /* UserInfoViewController.swift */; };
+		5DA5601823675AD4002EB595 /* UserInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */; };
+		5DA5601A23675AE6002EB595 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601923675AE6002EB595 /* UsersListViewModel.swift */; };
+		5DA5601C23675AFB002EB595 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		5DA5600723675537002EB595 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DA5600A236756A8002EB595 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5DA5600C2367577F002EB595 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
+		5DA5600F236758E2002EB595 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		5DA5601123675A4C002EB595 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		5DA5601323675A5B002EB595 /* UsersListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersListViewController.storyboard; sourceTree = "<group>"; };
+		5DA5601523675ABF002EB595 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfoViewController.storyboard; sourceTree = "<group>"; };
+		5DA5601923675AE6002EB595 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jetmessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B7493B6D715EE6B7F315A /* Pods-jetmessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jetmessenger.debug.xcconfig"; path = "Target Support Files/Pods-jetmessenger/Pods-jetmessenger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +102,7 @@
 			children = (
 				5DA5600723675537002EB595 /* Constants.swift */,
 				5DA560092367569D002EB595 /* Network Layer */,
+				5DA5600E236758D4002EB595 /* Cache Service */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -176,6 +191,9 @@
 		5DA55FFF236751A7002EB595 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				5DA5601923675AE6002EB595 /* UsersListViewModel.swift */,
+				5DA5601123675A4C002EB595 /* UsersListViewController.swift */,
+				5DA5601323675A5B002EB595 /* UsersListViewController.storyboard */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -183,6 +201,9 @@
 		5DA56000236751AE002EB595 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */,
+				5DA5601523675ABF002EB595 /* UserInfoViewController.swift */,
+				5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -193,6 +214,14 @@
 				5DA5600A236756A8002EB595 /* Network.swift */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		5DA5600E236758D4002EB595 /* Cache Service */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5600F236758E2002EB595 /* CacheService.swift */,
+			);
+			path = "Cache Service";
 			sourceTree = "<group>";
 		};
 		889160654617931D35352FA0 /* Pods */ = {
@@ -272,7 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA5601423675A5B002EB595 /* UsersListViewController.storyboard in Resources */,
 				5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */,
+				5DA5601823675AD4002EB595 /* UserInfoViewController.storyboard in Resources */,
 				5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,9 +359,14 @@
 			files = (
 				5DA5600823675537002EB595 /* Constants.swift in Sources */,
 				5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */,
+				5DA56010236758E2002EB595 /* CacheService.swift in Sources */,
 				5DA5600B236756A8002EB595 /* Network.swift in Sources */,
 				5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */,
+				5DA5601C23675AFB002EB595 /* UserInfoViewModel.swift in Sources */,
+				5DA5601223675A4C002EB595 /* UsersListViewController.swift in Sources */,
 				5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */,
+				5DA5601623675ABF002EB595 /* UserInfoViewController.swift in Sources */,
+				5DA5601A23675AE6002EB595 /* UsersListViewModel.swift in Sources */,
 				5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */,
 				5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */,
 			);
