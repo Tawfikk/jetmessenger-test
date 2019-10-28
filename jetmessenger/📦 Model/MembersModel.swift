@@ -9,8 +9,16 @@
 import Foundation
 import RealmSwift
 
-struct MembersModel: Codable {
-    let members: [MembersModelList]
+class MembersModel: Object, Codable {
+    @objc dynamic var count = 0
+    @objc dynamic var total = 0
+    @objc dynamic var offset = 0
+    @objc dynamic var success = true
+    let members = List<MembersModelList>()
+    
+    override class func primaryKey() -> String? {
+        return "offset"
+    }
 }
 
 class MembersModelList: Object, Codable {

@@ -7,11 +7,13 @@
 //
 
 import RealmSwift
+import Realm
 import RxSwift
+import RxRealm
 
 protocol CacheService: class {
     func cache(_ objects: [Object], for offset: Int) -> Observable<Bool>
-    func retrieveMembers() -> Observable<[MembersModelList]>
+    func retrieveMembers(by offset: Int) -> Observable<[MembersModelList]>
 }
 
 final class CacheServiceImplementation: CacheService {
@@ -21,10 +23,15 @@ final class CacheServiceImplementation: CacheService {
     init() {
     }
         
-    func retrieveMembers() -> Observable<[MembersModelList]> {
+    func retrieveMembers(by offset: Int) -> Observable<[MembersModelList]> {
         let realm = try! Realm()
-        let membersArray = Array(realm.objects(MembersModelList.self))
-        return Observable.just(membersArray)
+        var members: [MembersModelList] = []
+        guard let arrayMembers = realm.object(ofType: MembersModel.self, forPrimaryKey: offset)?.members else {
+            return Observable.just(members)
+        }
+        
+        members = Array(arrayMembers)
+        return Observable.just(members)
     }
     
     func cache(_ objects: [Object],  for offset: Int) -> Observable<Bool> {

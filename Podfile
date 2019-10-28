@@ -12,6 +12,7 @@ target 'jetmessenger' do
   
   # Data base
   pod 'RxRealm'
+  pod 'RxRealm'
   pod 'RealmSwift'
 
 end
