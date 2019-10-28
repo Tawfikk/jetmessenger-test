@@ -10,7 +10,7 @@ import Moya
 import RxSwift
 
 protocol Network: class {
-    func getMembers(offset: Int, count: Int) -> Single<MembersModel>
+    func getMembers(offset: Int) -> Single<MembersModel>
 }
 
 final class NetworkImplementation: Network {
@@ -22,9 +22,9 @@ final class NetworkImplementation: Network {
     }
     
     //
-    func getMembers(offset: Int, count: Int) -> Single<MembersModel> {
+    func getMembers(offset: Int) -> Single<MembersModel> {
         return provider.rx
-            .request(.members(offset: offset, count: count))
+            .request(.members(offset: offset))
             .map(MembersModel.self)
     }
 }

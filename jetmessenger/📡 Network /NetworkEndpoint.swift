@@ -9,7 +9,7 @@
 import Moya
 
 enum NetworkEndpoint {
-    case members(offset: Int, count: Int)
+    case members(offset: Int)
 }
 
 extension NetworkEndpoint: TargetType {
@@ -33,11 +33,11 @@ extension NetworkEndpoint: TargetType {
     
     var task: Task {
         switch self {
-        case .members(let offset, let count):
+        case .members(let offset):
             var parameters: [String: Any] = [:]
-            parameters["count"] = count
             parameters["offset"] = offset
             parameters["roomName"] = UserConstants.roomName
+            parameters["count"] = UserConstants.membersCount
             
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }

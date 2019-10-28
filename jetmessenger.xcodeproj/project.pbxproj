@@ -10,7 +10,6 @@
 		08C821724A5149FC51B3D3B2 /* Pods_jetmessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */; };
 		5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE023674F9A002EB595 /* AppDelegate.swift */; };
 		5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FE923674F9B002EB595 /* Assets.xcassets */; };
-		5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FEB23674F9B002EB595 /* LaunchScreen.storyboard */; };
 		5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56001236752B7002EB595 /* UIStoryboard.swift */; };
 		5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56003236752C8002EB595 /* UITableView+extension.swift */; };
 		5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56005236753CE002EB595 /* NetworkEndpoint.swift */; };
@@ -24,6 +23,7 @@
 		5DA5601823675AD4002EB595 /* UserInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */; };
 		5DA5601A23675AE6002EB595 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601923675AE6002EB595 /* UsersListViewModel.swift */; };
 		5DA5601C23675AFB002EB595 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */; };
+		5DB5B3D023675F7C00B0A8CE /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5B3CF23675F7C00B0A8CE /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +46,7 @@
 		5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfoViewController.storyboard; sourceTree = "<group>"; };
 		5DA5601923675AE6002EB595 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
+		5DB5B3CF23675F7C00B0A8CE /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jetmessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B7493B6D715EE6B7F315A /* Pods-jetmessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jetmessenger.debug.xcconfig"; path = "Target Support Files/Pods-jetmessenger/Pods-jetmessenger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,8 +86,8 @@
 			children = (
 				5DA55FE023674F9A002EB595 /* AppDelegate.swift */,
 				5DA55FF82367512A002EB595 /* 📦 Model */,
-				5DA55FF42367511B002EB595 /* Core */,
 				5DA55FFE23675184002EB595 /* 📡 Network  */,
+				5DA55FF42367511B002EB595 /* Core */,
 				5DA55FF52367511F002EB595 /* Extensions */,
 				5DA55FF923675135002EB595 /* Business Logic */,
 				5DA55FFA2367513C002EB595 /* 📱 Screens */,
@@ -143,6 +144,7 @@
 		5DA55FF923675135002EB595 /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5B3CF23675F7C00B0A8CE /* DataProvider.swift */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -302,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA5601423675A5B002EB595 /* UsersListViewController.storyboard in Resources */,
-				5DA55FED23674F9B002EB595 /* LaunchScreen.storyboard in Resources */,
 				5DA5601823675AD4002EB595 /* UserInfoViewController.storyboard in Resources */,
 				5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */,
 			);
@@ -369,6 +370,7 @@
 				5DA5601A23675AE6002EB595 /* UsersListViewModel.swift in Sources */,
 				5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */,
 				5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */,
+				5DB5B3D023675F7C00B0A8CE /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

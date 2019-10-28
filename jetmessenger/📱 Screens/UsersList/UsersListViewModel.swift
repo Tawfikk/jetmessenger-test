@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class UsersListViewModel {
     
     // MARK: - Private properties 🕶
     
     // MARK: - Visible properties 👓
+    var membersList = BehaviorRelay<[MembersModelList]>(value: [])
     
     // MARK: - Constructor 🏗
     init() {

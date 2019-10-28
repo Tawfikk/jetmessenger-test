@@ -9,6 +9,7 @@
 import Foundation
 
 enum UserConstants {
+    static let membersCount = 20
     static let roomName = "general"
     static let userID = "e2qQQA3adTsZGN8et"
     static let userToken = "kc8AHBZlH3iCObf9alUrfpDkUoBAEsYoEEw3JBemQq3"

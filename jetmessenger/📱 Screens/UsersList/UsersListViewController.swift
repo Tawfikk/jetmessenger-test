@@ -10,6 +10,8 @@ import UIKit
 
 final class UsersListViewController: UIViewController {
     
+    var viewModel: UsersListViewModel!
+    
     // MARK: - Outlets 🔌
     @IBOutlet private weak var tableView: UITableView!
     
