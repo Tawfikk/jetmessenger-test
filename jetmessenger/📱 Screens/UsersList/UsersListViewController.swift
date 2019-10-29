@@ -32,7 +32,8 @@ extension UsersListViewController {
     func tableViewBinding() {
         viewModel.output.membersList.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: UserTableViewCell.identifier, cellType: UserTableViewCell.self)) { row, item, cell in
-                let model = UserTableViewCell.ViewModel(name: item.name, state: item.status, image: "")
+                let model = UserTableViewCell.ViewModel(name: item.name, state: item.status, userName: item.userName ?? "")
+                cell.fill(model)
         }.disposed(by: bag)
     }
 }
@@ -54,7 +55,6 @@ private extension UsersListViewController {
             .disposed(by: bag)
         
         tableView.rx.reachedBottom
-            .observeOn(ConcurrentMainScheduler.instance)
             .bind(to: viewModel.input.loadNextPageTrigger)
             .disposed(by: bag)
         

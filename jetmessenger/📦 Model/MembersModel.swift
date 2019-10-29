@@ -49,11 +49,15 @@ class MembersModelList: Object, Decodable {
     @objc dynamic var id = ""
     @objc dynamic var name = ""
     @objc dynamic var status = ""
+    @objc dynamic var userName: String? = ""
+    @objc dynamic var statusText: String? = ""
     
     private enum CodingKeys: String, CodingKey {
         case id = "_id"
         case name
         case status
+        case userName = "username"
+        case statusText
     }
     
     override class func primaryKey() -> String? {
