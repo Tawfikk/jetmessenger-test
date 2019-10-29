@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 protocol DataProvider: class {
-    func obtainMembers(offset: Int) -> BehaviorRelay<[MembersModelList]>
+    func obtainMembers(offset: Int) -> Observable<[MembersModelList]>
 }
 
 final class DataProviderImplementation: DataProvider {
@@ -32,8 +32,10 @@ final class DataProviderImplementation: DataProvider {
     }
     
     //
-    func obtainMembers(offset: Int) -> BehaviorRelay<[MembersModelList]> {
-        cacheService.retrieveMembers(by: offset).bind(to: membersCache).disposed(by: bag)
-        networkService.getMembers(offset: offset).asObservable().bind(to: membersModel)
+    func obtainMembers(offset: Int) -> Observable<[MembersModelList]> {
+        return Observable.combineLatest(cacheService.retrieveMembers(by: offset), networkService.getMembers(offset: offset).asObservable()) { cache, network in
+            guard cache.count != 0 else { return network.members.toArray() }
+            return cache
+        }
     }
 }

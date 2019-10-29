@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setup()
+        NetworkActivityLogger.shared.startLogging()
         
         return true
     }
@@ -29,10 +31,14 @@ extension AppDelegate {
     }
     
     func setRootController() {
-        let usersListViewModel = UsersListViewModel()
-        let usersListController = UsersListViewController()
-        usersListController.viewModel = usersListViewModel
+        let usersListController = UIStoryboard.get(UsersListViewController.self)
         self.rootController = UINavigationController(rootViewController: usersListController)
+        
+        let networkService = NetworkImplementation()
+        let cacheService = CacheServiceImplementation()
+        let dataProvider = DataProviderImplementation(network: networkService, cache: cacheService)
+        let usersListViewModel = UsersListViewModel(provider: dataProvider)
+        usersListController.viewModel = usersListViewModel
         
         
         self.window = UIWindow(frame: UIScreen.main.bounds)

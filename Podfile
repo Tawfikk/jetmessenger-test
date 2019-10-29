@@ -1,10 +1,14 @@
 target 'jetmessenger' do
   use_frameworks!
   
+  # UI
+  pod 'SVProgressHUD'
+  
   # Network
   pod 'Moya'
   pod 'Kingfisher'
   pod 'Moya/RxSwift'
+  pod 'AlamofireNetworkActivityLogger'
 
   # Core
   pod 'RxCocoa'

@@ -25,13 +25,8 @@ final class CacheServiceImplementation: CacheService {
         
     func retrieveMembers(by offset: Int) -> Observable<[MembersModelList]> {
         let realm = try! Realm()
-        var members: [MembersModelList] = []
-        guard let arrayMembers = realm.object(ofType: MembersModel.self, forPrimaryKey: offset)?.members else {
-            return Observable.just(members)
-        }
-        
-        members = Array(arrayMembers)
-        return Observable.just(members)
+        guard let members = realm.object(ofType: MembersModel.self, forPrimaryKey: offset) else { return Observable.just([]) }
+        return Observable.collection(from: members.members).map { $0.toArray() }
     }
     
     func cache(_ objects: [Object],  for offset: Int) -> Observable<Bool> {

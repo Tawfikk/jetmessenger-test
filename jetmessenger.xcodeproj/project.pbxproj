@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		08C821724A5149FC51B3D3B2 /* Pods_jetmessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854F0F718F3B93A5E0A2152E /* Pods_jetmessenger.framework */; };
+		5D61504D23683BFF009CD2C0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61504B23683BFF009CD2C0 /* UserTableViewCell.swift */; };
+		5D61504E23683BFF009CD2C0 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D61504C23683BFF009CD2C0 /* UserTableViewCell.xib */; };
+		5D61505123683C50009CD2C0 /* FillableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61505023683C50009CD2C0 /* FillableProtocol.swift */; };
+		5D615053236841B6009CD2C0 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D615052236841B6009CD2C0 /* BaseTableViewCell.swift */; };
+		5D61505623684219009CD2C0 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61505523684219009CD2C0 /* NSObject+Rx.swift */; };
+		5D615058236857A8009CD2C0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D615057236857A8009CD2C0 /* ActivityIndicator.swift */; };
+		5D61505A23685881009CD2C0 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61505923685881009CD2C0 /* UIViewController+extension.swift */; };
+		5D9166D623686013003E5413 /* UsersListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166D523686013003E5413 /* UsersListViewModelType.swift */; };
+		5D9166D8236862FA003E5413 /* RxSwift+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166D7236862FA003E5413 /* RxSwift+UIScrollView.swift */; };
 		5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE023674F9A002EB595 /* AppDelegate.swift */; };
 		5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FE923674F9B002EB595 /* Assets.xcassets */; };
 		5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56001236752B7002EB595 /* UIStoryboard.swift */; };
@@ -28,6 +37,15 @@
 
 /* Begin PBXFileReference section */
 		256BAB635BB655A674927B7B /* Pods-jetmessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jetmessenger.release.xcconfig"; path = "Target Support Files/Pods-jetmessenger/Pods-jetmessenger.release.xcconfig"; sourceTree = "<group>"; };
+		5D61504B23683BFF009CD2C0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		5D61504C23683BFF009CD2C0 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5D61505023683C50009CD2C0 /* FillableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillableProtocol.swift; sourceTree = "<group>"; };
+		5D615052236841B6009CD2C0 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = ../Components/BaseTableViewCell.swift; sourceTree = "<group>"; };
+		5D61505523684219009CD2C0 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		5D615057236857A8009CD2C0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5D61505923685881009CD2C0 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		5D9166D523686013003E5413 /* UsersListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModelType.swift; sourceTree = "<group>"; };
+		5D9166D7236862FA003E5413 /* RxSwift+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+UIScrollView.swift"; sourceTree = "<group>"; };
 		5DA55FDD23674F9A002EB595 /* jetmessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jetmessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA55FE023674F9A002EB595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA55FE923674F9B002EB595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +81,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D615047236835FC009CD2C0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5D61505523684219009CD2C0 /* NSObject+Rx.swift */,
+				5D9166D7236862FA003E5413 /* RxSwift+UIScrollView.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		5D61504A23683BF2009CD2C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D61504C23683BFF009CD2C0 /* UserTableViewCell.xib */,
+				5D61504B23683BFF009CD2C0 /* UserTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D61504F23683C2F009CD2C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5D61505023683C50009CD2C0 /* FillableProtocol.swift */,
+				5D615057236857A8009CD2C0 /* ActivityIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5D615054236841BA009CD2C0 /* Base Components */ = {
+			isa = PBXGroup;
+			children = (
+				5D615052236841B6009CD2C0 /* BaseTableViewCell.swift */,
+			);
+			path = "Base Components";
+			sourceTree = "<group>";
+		};
+		5D9166D423686005003E5413 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D9166D523686013003E5413 /* UsersListViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		5DA55FD423674F9A002EB595 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +150,8 @@
 				5DA55FFE23675184002EB595 /* 📡 Network  */,
 				5DA55FF42367511B002EB595 /* Core */,
 				5DA55FF52367511F002EB595 /* Extensions */,
+				5D61504F23683C2F009CD2C0 /* Components */,
+				5D615054236841BA009CD2C0 /* Base Components */,
 				5DA55FF923675135002EB595 /* Business Logic */,
 				5DA55FFA2367513C002EB595 /* 📱 Screens */,
 				5DA55FFB23675145002EB595 /* View */,
@@ -113,6 +176,7 @@
 			children = (
 				5DA55FF623675122002EB595 /* UIKit */,
 				5DA55FF723675125002EB595 /* Foundation */,
+				5D615047236835FC009CD2C0 /* Libraries */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +186,7 @@
 			children = (
 				5DA56001236752B7002EB595 /* UIStoryboard.swift */,
 				5DA56003236752C8002EB595 /* UITableView+extension.swift */,
+				5D61505923685881009CD2C0 /* UIViewController+extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -193,6 +258,8 @@
 		5DA55FFF236751A7002EB595 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				5D9166D423686005003E5413 /* Protocols */,
+				5D61504A23683BF2009CD2C0 /* View */,
 				5DA5601923675AE6002EB595 /* UsersListViewModel.swift */,
 				5DA5601123675A4C002EB595 /* UsersListViewController.swift */,
 				5DA5601323675A5B002EB595 /* UsersListViewController.storyboard */,
@@ -303,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D61504E23683BFF009CD2C0 /* UserTableViewCell.xib in Resources */,
 				5DA5601423675A5B002EB595 /* UsersListViewController.storyboard in Resources */,
 				5DA5601823675AD4002EB595 /* UserInfoViewController.storyboard in Resources */,
 				5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */,
@@ -358,18 +426,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9166D8236862FA003E5413 /* RxSwift+UIScrollView.swift in Sources */,
+				5D615053236841B6009CD2C0 /* BaseTableViewCell.swift in Sources */,
 				5DA5600823675537002EB595 /* Constants.swift in Sources */,
 				5DA56004236752C8002EB595 /* UITableView+extension.swift in Sources */,
+				5D9166D623686013003E5413 /* UsersListViewModelType.swift in Sources */,
+				5D61504D23683BFF009CD2C0 /* UserTableViewCell.swift in Sources */,
 				5DA56010236758E2002EB595 /* CacheService.swift in Sources */,
 				5DA5600B236756A8002EB595 /* Network.swift in Sources */,
 				5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */,
+				5D61505A23685881009CD2C0 /* UIViewController+extension.swift in Sources */,
 				5DA5601C23675AFB002EB595 /* UserInfoViewModel.swift in Sources */,
 				5DA5601223675A4C002EB595 /* UsersListViewController.swift in Sources */,
 				5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */,
 				5DA5601623675ABF002EB595 /* UserInfoViewController.swift in Sources */,
 				5DA5601A23675AE6002EB595 /* UsersListViewModel.swift in Sources */,
 				5DA5600D2367577F002EB595 /* MembersModel.swift in Sources */,
+				5D61505623684219009CD2C0 /* NSObject+Rx.swift in Sources */,
+				5D61505123683C50009CD2C0 /* FillableProtocol.swift in Sources */,
 				5DA56006236753CE002EB595 /* NetworkEndpoint.swift in Sources */,
+				5D615058236857A8009CD2C0 /* ActivityIndicator.swift in Sources */,
 				5DB5B3D023675F7C00B0A8CE /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
