@@ -15,16 +15,19 @@ final class UsersListViewModel: UsersListViewModelType {
     // MARK: - Private properties 🕶
     private let bag = DisposeBag()
     private var pageOffset: Int = 0
-    private let dataProvider: DataProvider
     
     // MARK: - Visible properties 👓
+    let dataProvider: DataProvider
+    
     var isLoading: Observable<Bool>
     var isMoreLoading: Observable<Bool>
     
+    var requestLoading = ActivityIndicator()
     var errorMessage = PublishSubject<String>()
     var loadPageTrigger = PublishSubject<Void>()
     var loadNextPageTrigger = PublishSubject<Void>()
     
+    var selectedUser = BehaviorRelay<String>(value: "")
     var membersList = BehaviorRelay<[MembersModelList]>(value: [])
     
     // MARK: - Constructor 🏗
@@ -36,13 +39,12 @@ final class UsersListViewModel: UsersListViewModelType {
         
         let moreLoading = ActivityIndicator()
         self.isMoreLoading = moreLoading.asObservable()
-        
-        // First time load
+                
         let loadRequest = self.isLoading.asObservable()
             .sample(self.loadPageTrigger)
             .flatMap { isLoading -> Observable<[MembersModelList]> in
                 if isLoading {
-                    return Observable.empty()
+                    return Observable.just([])
                 } else {
                     self.pageOffset = 0
                     self.membersList.accept([])
@@ -50,12 +52,11 @@ final class UsersListViewModel: UsersListViewModelType {
                 }
         }
         
-        // Get more data by page
         let loadMoreRequest = self.isMoreLoading.asObservable()
             .sample(self.loadNextPageTrigger)
             .flatMap { isLoading -> Observable<[MembersModelList]> in
                 if isLoading {
-                    return Observable.empty()
+                    return Observable.just([])
                 } else {
                     self.pageOffset += 1
                     return self.dataProvider.obtainMembers(offset: self.pageOffset).trackActivity(moreLoading)
@@ -73,10 +74,9 @@ final class UsersListViewModel: UsersListViewModelType {
                 Observable.empty()
             }
         }.share(replay: 1)
-                
-        // Combine data when get more data by paging
+                        
         Observable.combineLatest(request, response, membersList.asObservable()) { request, response, members in
-            return self.pageOffset == 1 ? response : members + response
+            return self.pageOffset == 0 ? response : members + response
         }
         .sample(response)
         .bind(to: membersList)
@@ -88,6 +88,10 @@ final class UsersListViewModel: UsersListViewModelType {
 extension UsersListViewModel: UsersListViewModelInput {
     func refresh() {
         self.loadPageTrigger.onNext(())
+    }
+    
+    func tapped(_ userId: String) {
+        
     }
 }
 

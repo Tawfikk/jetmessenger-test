@@ -35,6 +35,11 @@ extension UsersListViewController {
                 let model = UserTableViewCell.ViewModel(name: item.name, state: item.status, userName: item.userName ?? "")
                 cell.fill(model)
         }.disposed(by: bag)
+        
+        tableView.rx.modelSelected(MembersModelList.self).subscribe(onNext: { model in
+            let selectedUserID = model.id            
+            self.viewModel.input.selectedUser.accept(selectedUserID)
+            }).disposed(by: bag)
     }
 }
 
@@ -57,6 +62,21 @@ private extension UsersListViewController {
         tableView.rx.reachedBottom
             .bind(to: viewModel.input.loadNextPageTrigger)
             .disposed(by: bag)
+        
+        tableView.rx.itemSelected
+            .map { (at: $0, animated: true) }
+            .subscribe(onNext: tableView.deselectRow)
+            .disposed(by: bag)
+        
+        viewModel.input.selectedUser
+            .skip(1)
+            .subscribe(onNext: { [weak self] id in
+                guard let `self` = self else { return }
+                let userInfoController = UIStoryboard.get(UserInfoViewController.self)
+                let userInfoViewModel = UserInfoViewModel(userID: id, dataProvider: self.viewModel.input.dataProvider)
+                userInfoController.viewModel = userInfoViewModel
+                self.navigationController?.pushViewController(userInfoController, animated: true)
+            }).disposed(by: bag)
         
         viewModel.output.isLoading
             .observeOn(MainScheduler.instance)

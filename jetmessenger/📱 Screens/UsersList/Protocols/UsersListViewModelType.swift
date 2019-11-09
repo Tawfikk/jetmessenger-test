@@ -12,16 +12,20 @@ import Foundation
 
 protocol UsersListViewModelInput: class {
     func refresh()
+    func tapped(_ userId: String)
+    var dataProvider: DataProvider { get }
     
+    var selectedUser: BehaviorRelay<String> { get }
     var loadPageTrigger: PublishSubject<Void> { get }
     var loadNextPageTrigger: PublishSubject<Void> { get }
 }
 
 protocol UsersListViewModelOutput: class {
+    var requestLoading: ActivityIndicator { get }
     var isLoading: Observable<Bool> { get }
     var isMoreLoading: Observable<Bool> { get }
     var errorMessage: PublishSubject<String> { get }
-    
+        
     var membersList: BehaviorRelay<[MembersModelList]> { get }
 }
 

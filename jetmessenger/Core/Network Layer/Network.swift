@@ -24,10 +24,7 @@ final class NetworkImplementation: Network {
     //
     func getMembers(offset: Int) -> Single<MembersModel> {
         return provider.rx
-            .request(.members(offset: offset))
-            .do(onSuccess: { response in
-                
-            })
+            .request(.members(offset: offset))            
             .map(MembersModel.self)
             
     }

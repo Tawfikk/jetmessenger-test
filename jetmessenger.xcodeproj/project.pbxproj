@@ -20,6 +20,7 @@
 		5D9166DA23687C45003E5413 /* String+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166D923687C45003E5413 /* String+Kingfisher.swift */; };
 		5D9166DC23688730003E5413 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166DB23688730003E5413 /* UIView+extension.swift */; };
 		5D9166DF23689248003E5413 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166DE23689248003E5413 /* UIImage+Icons.swift */; };
+		5D9166E22368A108003E5413 /* UserInfoViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9166E12368A108003E5413 /* UserInfoViewModelType.swift */; };
 		5DA55FE123674F9A002EB595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA55FE023674F9A002EB595 /* AppDelegate.swift */; };
 		5DA55FEA23674F9B002EB595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA55FE923674F9B002EB595 /* Assets.xcassets */; };
 		5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA56001236752B7002EB595 /* UIStoryboard.swift */; };
@@ -52,6 +53,7 @@
 		5D9166D923687C45003E5413 /* String+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Kingfisher.swift"; sourceTree = "<group>"; };
 		5D9166DB23688730003E5413 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		5D9166DE23689248003E5413 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
+		5D9166E12368A108003E5413 /* UserInfoViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModelType.swift; sourceTree = "<group>"; };
 		5DA55FDD23674F9A002EB595 /* jetmessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jetmessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA55FE023674F9A002EB595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA55FE923674F9B002EB595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			isa = PBXGroup;
 			children = (
 				5D9166D523686013003E5413 /* UsersListViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5D9166E02368A0FC003E5413 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D9166E12368A108003E5413 /* UserInfoViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -267,8 +277,8 @@
 		5DA55FFF236751A7002EB595 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
-				5D9166D423686005003E5413 /* Protocols */,
 				5D61504A23683BF2009CD2C0 /* View */,
+				5D9166D423686005003E5413 /* Protocols */,
 				5DA5601923675AE6002EB595 /* UsersListViewModel.swift */,
 				5DA5601123675A4C002EB595 /* UsersListViewController.swift */,
 				5DA5601323675A5B002EB595 /* UsersListViewController.storyboard */,
@@ -279,6 +289,7 @@
 		5DA56000236751AE002EB595 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5D9166E02368A0FC003E5413 /* Protocols */,
 				5DA5601B23675AFB002EB595 /* UserInfoViewModel.swift */,
 				5DA5601523675ABF002EB595 /* UserInfoViewController.swift */,
 				5DA5601723675AD4002EB595 /* UserInfoViewController.storyboard */,
@@ -447,6 +458,7 @@
 				5D9166DA23687C45003E5413 /* String+Kingfisher.swift in Sources */,
 				5DA56002236752B7002EB595 /* UIStoryboard.swift in Sources */,
 				5D61505A23685881009CD2C0 /* UIViewController+extension.swift in Sources */,
+				5D9166E22368A108003E5413 /* UserInfoViewModelType.swift in Sources */,
 				5DA5601C23675AFB002EB595 /* UserInfoViewModel.swift in Sources */,
 				5DA5601223675A4C002EB595 /* UsersListViewController.swift in Sources */,
 				5D9166DF23689248003E5413 /* UIImage+Icons.swift in Sources */,
